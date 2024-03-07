@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>About Us</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/
+    font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="about.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='about.css') }}">
+
+</head>
+
+
+<body>
+    
+    <div class="section">
+        <div class="title">
+            <h1>Welcome to AMS</h1>
+            <p> Your Reliable Apartment Management Partner</p>
+            
+        </div>
+        <div class="services">
+            <div class="card">
+                <div class="icon">
+                    <i class="fas fa-calender"></i>
+                </div>
+                <h2>Our Mission</h2>
+                
+                <p>Our mission is simple: to provide an intuitive, efficient, and accessible apartment management solution that meets the needs of property managers, landlords, and residents. We believe that effective property management is the key to creating harmonious living spaces, and our system is designed to foster communication, efficiency, and satisfaction for all parties involved.
+                </p>
+                
+            </div>
+            <div class="card">
+                <div class="icon">
+                    <i class="fas fa-wrench"></i>
+                </div>
+                <h2>What We Offer</h2>
+                
+                <p>AMS is more than just a management tool; it's a holistic platform that addresses every facet of apartment management. From rent collection and maintenance requests to tenant screening and document management, our system is equipped to handle it all. Our features include:
+
+                    Online Rent Payments: Secure and hassle-free transactions every time.
+                    Maintenance Request Portal: Quick and easy submission of maintenance requests with real-time updates.
+                    Tenant Screening: Comprehensive background checks to ensure community safety.
+                    Document Management: All your important documents stored securely in one place.
+                    Communication Tools: Seamless communication between tenants and property managers.</p>
+                <a href="{{url_for('login_page')}}" class="button">Login</a>
+        </div>
+        <div class="card">
+            <div class="icon">
+                <i class="fas fa-handshake"></i>
+            </div>
+            <h2>Join Us</h2>
+            
+            <p>
+
+                Embrace the future of apartment management with AMS. Let us help you transform your property management experience into a seamless, productive, and enjoyable journey. Contact us to learn more about how our system can benefit you.</p>
+           
+    </div>
+</body>
+</html>

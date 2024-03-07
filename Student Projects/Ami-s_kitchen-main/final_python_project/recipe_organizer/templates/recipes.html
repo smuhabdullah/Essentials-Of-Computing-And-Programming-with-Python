@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character set and viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the webpage -->
+    <title>Recipe Organizer</title>
+    <!-- Link to Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Inline CSS for styling -->
+    <style>
+        /* Body styling */
+        body {
+            background: url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=1080&ixid=MnwxfDB8MXxyYW5kb218MHx8Zm9vZHx8fHx8fDE3MDg2NDE0MjI&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1920') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #fff;
+            padding-top: 50px;
+            filter: brightness(70%); /* Adjust background brightness */
+        }
+        /* Container styling */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        /* Card styling */
+        .card {
+            background-color: rgba(255, 255, 255, 0.7); /* Transparent background for the card */
+            border: 2px solid #343a40; /* Darker border */
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px; /* Padding inside the card */
+        }
+        /* Form control styling */
+        .form-control {
+            border-radius: 5px;
+            border-color: #343a40; /* Darker border color */
+        }
+        /* Primary button styling */
+        .btn-primary {
+            background-color: #28a745;
+            border-color: #28a745;
+            border-radius: 20px;
+            transition: all 0.3s ease; /* Smooth transition */
+        }
+        /* Hover effect for primary button */
+        .btn-primary:hover {
+            background-color: #218838;
+            border-color: #1e7e34;
+        }
+        /* Table styling */
+        .table th,
+        .table td {
+            vertical-align: middle;
+            color: #212529;
+        }
+        .table th {
+            background-color: #f8f9fa;
+            color: #6c757d;
+        }
+        .table-striped tbody tr:nth-of-type(odd) {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Container for the content -->
+    <div class="container">
+        <!-- Form for adding a new recipe -->
+        <form method="post" enctype="multipart/form-data" class="card">
+            {% csrf_token %} <!-- CSRF token for security -->
+            <h1 class="mb-4 text-center">Ami's Kitchen</h1> <!-- Title for the form -->
+            <hr> <!-- Horizontal line separator -->
+            <div class="mb-3">
+                <label for="recipeName" class="form-label">Recipe Name</label>
+                <input name="recipe_name"  type="text" class="form-control" id="recipeName" required> <!-- Input field for recipe name -->
+            </div>
+            <div class="mb-3">
+                <label for="recipeDescription" class="form-label">Recipe Description</label>
+                <textarea name="recipe_text" class="form-control" id="recipeDescription" rows="3"></textarea>  <!-- Textarea for recipe description -->
+            </div>
+            <div class="mb-3">
+                <label for="recipeImage" class="form-label">Recipe Image</label>
+                <input name="recipe_picture" type="file" class="form-control" id="recipeImage"> <!-- Input field for recipe image -->
+            </div>
+            <button type="submit" class="btn btn-primary d-block mx-auto">ADD RECIPE</button> <!-- Button to submit the form -->
+        </form>
+
+        <!-- Form for searching recipes -->
+        <form method="get" class="input-group mt-4">
+            <input name="searchs" type="text" class="form-control" placeholder="Search recipes..."> <!-- Input field for search query -->
+            <button type="submit" class="btn btn-primary">Search</button> <!-- Button to submit the search query -->
+        </form>
+
+        <br>
+
+        <!-- Table to display recipes -->
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Recipe Name</th>
+                        <th scope="col">Recipe Text</th>
+                        <th scope="col">Recipe Picture</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for recipe in recipes %} <!-- Loop through recipes -->
+                    <tr>
+                        <th scope="row">{{ forloop.counter }}</th> <!-- Index counter for recipes -->
+                        <td>{{ recipe.recipe_name }}</td> <!-- Display recipe name -->
+                        <td>{{ recipe.recipe_text }}</td> <!-- Display recipe description -->
+                        <td><img src="/media/{{ recipe.recipe_picture }}" style="height:100px"></td> <!-- Display recipe image -->
+                        <td>
+                            <a href="/delete-recipe/{{ recipe.id }}" class="btn btn-danger">Delete</a> <!-- Button to delete recipe -->
+                            <a href="/update-recipe/{{ recipe.id }}" class="btn btn-success">Update</a> <!-- Button to update recipe -->
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- Bootstrap JavaScript bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

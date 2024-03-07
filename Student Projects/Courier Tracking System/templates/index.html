@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courier Tracking System</title>
+    <link href="{{ url_for('static', filename='dhl.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        
+        <div class="container">
+            <div class="card text-center">
+                <div class="card-header">
+                  <ul class="nav nav-pills card-header-pills">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="{{ url_for('index') }}">Courier Tracking</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{{ url_for('create_shipment') }}">Create Shipment</a>
+                    </li>
+                    
+                    
+                  </ul>
+                </div>
+                </div>
+            
+            <br>
+        </div>
+    </header>
+    <section class="tracking">
+        <div class="container">
+            <h2>Track Your Shipment</h2>
+            <form action="{{ url_for('track') }}" method="post">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="tracking_id" name="tracking_id" placeholder="Enter Tracking ID" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Track</button>
+            </form>
+        </div>
+    </section>
+    <!-- <section class="recent-shipments">
+        <div class="container">
+            <h2>Recent Shipments</h2>
+            <ul class="list-group">
+                {% for shipment in n %}
+                <li class="list-group-item">
+                    <p><strong>Tracking ID:</strong> {{ shipment.id }}</p>
+                    <p><strong>Status:</strong> {{ shipment.status }}</p>
+                    <p><strong>Location:</strong> {{ shipment.location }}</p>
+                    <p><strong>ETA:</strong> {{ shipment.eta }}</p>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </section> -->
+</body>
+</html>

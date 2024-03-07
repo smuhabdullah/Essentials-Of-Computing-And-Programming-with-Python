@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="sign-up-form">
+        <h1>Sign Up</h1>
+        <form method="POST" action="/signup"> <!-- Specify method and action -->
+            <input type="text" class="input-box" placeholder="First Name" name="first_name" required>
+            <input type="text" class="input-box" placeholder="Last Name" name="last_name" required>
+            <input type="email" class="input-box" placeholder="Email" name="email" required>
+            <input type="text" class="input-contact" placeholder="Contact" name="contact" required>
+            <input type="password" class="input-pass" placeholder="Password" name="password" required>
+            <input type="password" class="input-cpass" placeholder="Confirm Password" name="confirm_password" required>
+            <p><input type="checkbox" name="terms_conditions" required> I agree to the terms and conditions</p>
+            <button type="submit" class="Signupbutton">Sign Up</button> <!-- Change type to submit -->
+            <hr>
+            <p>Already have an account? <a href="{{url_for('login_page')}}">Login</a></p>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,117 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+    font-family: sans-serif;
+    
+}
+body{
+    width: 100%;
+    background-color:#809faa;
+    background-image: url("hoeimg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+} 
+.title h1{
+    text-align: center;
+    padding-top:60px ;
+    font-size:42px ;
+    color: rgb(252, 247, 247);
+   
+    
+}
+.title h1::after{
+    
+    height: 4px;
+    width: 230px;
+    background-color: #5e5e5e;
+    display: block;
+    margin: auto;
+    
+}
+.services{
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 75px auto;
+    text-align: center;
+   
+   
+}
+.card{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px 20px;
+    padding: 20px 20px;
+    background-color: #efefef;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.card:hover{
+    background-color: #aef0f0;
+    transition: 0.4s ease;
+    
+    
+}
+.card .icon{
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+.card h2{
+    font-size: 28px;
+    color: #c94f4f;
+    margin-bottom: 20px;
+}
+.card p{
+    font-size: 17px;
+    margin-bottom: 30px;
+    Line-height: 1.5;
+    color:#5e5e5e;
+    }
+    .button{
+    font-size: 15px;
+    text-decoration: none;
+    color:#fff;
+    background-color: #2c677c;
+    padding:8px 12px;
+    border-radius: 5px;
+    Letter-spacing: 1px;
+    }
+    .button:hover{
+    background-color: #c94f4f;
+    transition: 0.4s ease;
+    }
+.title p {
+    text-align: center;
+    padding-top:50px ;
+    font-size:42px ;
+    font-weight: 550;
+    
+}
+.button{
+    animation-name: slidein;
+    animation-duration: 2s;
+}
+@keyframes slidein{
+    from{
+        transform: translateY(10%);
+    }
+    to{
+        transform: translateY(0%) ;
+    }
+}
+.services{
+    animation-name: slidein;
+    animation-duration: 1s;
+}
+
+.title{
+    animation-name: slidein;
+    animation-duration: 1s;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+<link rel="stylesheet" type="text/css" href="contactstyle.css">
+
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='contactstyle.css') }}">
+
+
+</head>
+<body>
+    <div class="Contact">
+        <h1>Contact</h1>
+
+        <form>
+            <input type="text" class="input-box" placeholder="First Name" id="First name" required>
+            <input type="text" class="input-box" placeholder="Last Name" id="Last name" required>
+            <input type="email" class="input-box" placeholder="Email">
+            <input type="message" class="input-box" placeholder="Type Message...">
+           
+
+               
+            <select class="form-select" aria-label="Default select ">
+                
+                <option selected>Location</option>
+                <option value="1">USA</option>
+                <option value="2">Canada</option>
+                <option value="3">Australia</option>
+                <option value="4">Japan</option>
+              </select>
+            
+            
+
+              <button type="button" class="Submitbutton">Submit</button>
+              <hr>
+             
+        </form>
+    </div>
+</body>
+</html>
+

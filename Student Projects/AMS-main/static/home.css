@@ -1,0 +1,171 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url('imghome.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.header {
+    background: rgba(19, 19, 29, 0.1) fixed center/cover no-repeat;
+    padding: 1.3rem 10%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    
+}
+
+.navbar {
+    position: fixed;
+    top: 5px;
+    left: 5%;
+    width: 40%;
+    padding: 1.3rem 0;
+    justify-content: space-between;
+    text-align: center;
+    display: flex;
+    z-index: 100;
+    font-size: 1.15rem;
+    font-weight: 600;
+    text-decoration: none;
+    
+}
+
+.navbar a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.navbar a:hover {
+    color: rgb(84, 39, 247);
+    transform: scale(1.1);
+}
+
+.logo {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    margin: 5px;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-links a {
+    text-decoration: none;
+    margin: 10px;
+    color: rgba(0, 0, 0, 0.705);
+    text-transform: uppercase;
+}
+
+.header-content{
+       
+    position: relative;top: 20vh;
+    
+
+}
+.header-content h1 {
+    font-size: 2.6em;
+    text-align: left;
+    top: 50%;
+    animation: fade-Up 1s ease;
+    text-indent: 100px;
+
+}
+
+.header-content h3 {
+    margin-bottom: 30px;
+    /* text-align: left(20px); */
+    margin: auto;
+    animation: fade-Up 1.5s ease;
+    text-indent: 49px;
+    
+}
+
+#box p{
+    width: 550px;   
+    border: 2px transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    text-align: top(50%);
+    justify-content: left;
+    backdrop-filter: blur(1px);
+    animation: fade-Up 1.5s ease;
+    line-height: 37px;
+    max-width: 700px;
+    height: 50%;
+    margin: 40px;
+    /* font-family: 'Times New Roman', Times, serif; */
+    font-weight: 600;
+
+
+}
+
+
+
+.buttons {
+    display: flex;
+    justify-content: left;
+    text-indent:  5px; 
+    margin: 0 80px;
+     
+}
+
+.btn-watch,
+.btn-subscribe {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0 20px;
+    transition: background-color 0.3s ease;
+    position: relative;margin-left: 60px;
+}
+
+.btn-watch {
+    background-color: rgb(240, 211, 159);
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.btn-watch:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+.btn-subscribe {
+    background-color: rgb(220, 193, 143);
+    color: rgba(1, 3, 3, 0.966);
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.btn-subscribe:hover {
+    background-color: #ffffff;
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .nav-links,
+    .buttons {
+        flex-direction: column;
+    }
+
+    .nav-links a,
+    .buttons a {
+        margin-bottom: 10px;
+    }
+}
+
+@keyframes fade-Up {
+    0% {
+        opacity: 0.2;
+        transform: translateY(2.5rem) scale(1);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}

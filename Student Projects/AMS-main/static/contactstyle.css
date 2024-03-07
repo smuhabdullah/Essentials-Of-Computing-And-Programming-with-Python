@@ -1,0 +1,104 @@
+body
+{
+   margin: 0;
+   padding: 0;
+   background-image: url('cimg4.jpg');
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-attachment: fixed;
+}
+
+.Contact
+{
+    border-radius: 20px;
+    width: 300px;
+    background:rgba(228, 192, 146, 0.822);
+    padding: 20px;
+    margin: 5.5% auto;
+    text-align: center;
+    
+    
+}
+.Contact h1
+{
+    color: rgb(0, 0, 0);
+    margin-bottom: 30px;
+}
+.input-box
+{
+    border-radius: 20px;
+    padding: 11px;
+    margin: 10px 0;
+    width: 87%;
+    border: 1px solid #998;
+    outline: none;
+}
+button
+{
+    color: rgb(1, 7, 5);
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 15px;
+    border: none;
+    cursor:pointer;
+    margin: 10px 0;
+
+}
+.Contact
+{
+    background-color: rgba(246, 181, 101, 0.788);
+    
+}
+a{
+    text-decoration: none;
+}
+hr
+{
+    margin-top: 20px;
+    width: 80%;
+}
+.form-select
+{
+    border-radius: 82px;
+    padding: 13px;
+    margin: 8px 0;
+    width: 95%;
+    border: 1px solid #998;
+    outline: none;
+}
+.input-contact
+{
+    border-radius: 20px;
+    padding: 11px;
+    margin: 10px 0;
+    width: 87%;
+    border: 1px solid #998;
+}
+.input-pass
+{
+    border-radius: 50px;
+    padding: 11px;
+    margin: 10px 0;
+    width: 87%;
+    border: 1px solid #998;
+}
+.input-cpass
+{
+    border-radius: 20px;
+    padding: 11px;
+    margin: 10px 0;
+    width: 87%;
+    border: 1px solid #998;
+}
+.Signupbutton:hover{
+    background: rgb(66, 237, 220);
+    transform: scale(1.01);
+}
+
+.Submitbutton:hover{
+    background: rgb(150, 206, 181);
+    transform: scale(1.01);
+    color:rgb(0, 0, 0);
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMS</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home.css') }}">
+ 
+
+
+
+</head>
+<!-- <body background="imghome.jpg"> -->
+    
+    
+        <header class="header">
+        <a href="#" class="logo" ><img src="" alt=""></a>
+        <nav class="navbar">
+        <a href="#">Home</a>
+        <a href='/signup' >Signup</a><br>
+        <a href='/about'>About </a><br>
+        <a href='/contact'>Contact</a><br>
+        </nav>
+        </header>
+        <div class="header-content">
+            <h1>WELCOME TO AMS</h1>
+            <h3 class="btn"><b>Your One-Stop Solution for Hassle-Free Apartment Living</b></h3>
+        <div id="box">
+            <p>
+                <b>"Welcome to our Apartment Management System, Our platform offers a comprehensive solution for property managers and tenants alike, streamlining communication, maintenance requests, rent payments, and more. With intuitive interfaces and robust features, we empower property managers to efficiently oversee their properties while providing tenants with a seamless living experience. Say goodbye to hassle and hello to convenience with our Apartment Management System."</b></p>
+
+        </div>
+            
+            <div class="buttons">
+                <a href="{{url_for('about')}}" class="btn-watch">ABOUT</a>
+                <a href="{{url_for('login_page')}}" class="btn-subscribe">LOGIN</a>
+            </div>
+        </div>
+    </header>
+</body>
+</html>

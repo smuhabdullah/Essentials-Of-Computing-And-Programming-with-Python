@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courier Tracking System</title>
+    <link href="{{ url_for('static', filename='dhl.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        
+        <div class="container">
+            <div class="card text-center">
+                <div class="card-header">
+                  <ul class="nav nav-pills card-header-pills">
+                    <li class="nav-item">
+                      <a class="nav-link " href="{{ url_for('index') }}">Courier Tracking</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{{ url_for('create_shipment') }}">Create Shipment</a>
+                    </li>
+                    
+                    
+                  </ul>
+                </div>
+                </div>
+            
+            <br>
+        </div>
+    </header>
+    
+    <section class="update-shipment">
+        <div class="container">
+            <h2>Update Shipment Record</h2>
+            <form action="{{ url_for('update_shipment') }}" method="post">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="id" name="id" placeholder="{{ n[0] }} (Enter Your Shipment ID TO Confirm Update Action)" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="status" name="status" placeholder="Status" value="{{ n[1] }}" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="location" name="location" placeholder="Location" value="{{ n[2] }}" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="eta" name="eta" placeholder="ETA" value="{{ n[3] }}" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Update Shipment Rocord</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

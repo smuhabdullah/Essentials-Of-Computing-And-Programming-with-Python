@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="loginstyle.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='owner.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='loginstyle.css') }}">
+
+
+</head>
+<body>
+  <div class="wrapper">
+    <form method="POST" action="{{ url_for('owner') }}">
+      <h1>Login</h1>
+      <div class="input-box">
+        <input type="text" placeholder="Email" name="email" required="email">
+        <i class='bx bxs-user'></i>
+      </div>
+      <div class="input-box">
+        <input type="password" placeholder="Password" name="password" required="password">
+        <i class='bx bxs-lock-alt' ></i>
+      </div>
+      <a href="{{ url_for('signup') }}">Register</a>
+      <button type="submit" class="btn">Login</button></a{{ url_for('owner') }}a>
+      <div class="register-link">
+        <p>Don't have an account? <a href="{{ url_for('signup') }}">Register</a></p>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

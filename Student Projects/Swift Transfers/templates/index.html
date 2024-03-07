@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Swift Transfer App</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Swift Transfer</h1>
+        <form method="POST">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            
+<div class="form-group">
+    <label for="contact_number">Contact Number:</label>
+    <input type="tel" class="form-control" id="contact_number" name="contact_number" required>
+</div>
+
+            </div>
+            <div class="form-group">
+                <label for="pickup_location">Pickup Location:</label>
+                <input type="text" class="form-control" id="pickup_location" name="pickup_location" required>
+            </div>
+            <div class="form-group">
+                <label for="dropoff_location">Dropoff Location:</label>
+                <input type="text" class="form-control" id="dropoff_location" name="dropoff_location" required>
+            </div>
+            <div class="form-group">
+                <label for="date">Date:</label>
+                <input type="date" class="form-control" id="date" name="date" required>
+            </div>
+            <div class="form-group">
+                <label for="time">Time:</label>
+                <input type="time" class="form-control" id="time" name="time" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Book Car</button>
+        </form>
+    </div>
+</body>
+</html>

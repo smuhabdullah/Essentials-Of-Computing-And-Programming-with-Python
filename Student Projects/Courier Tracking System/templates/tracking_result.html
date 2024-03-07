@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracking Result</title>
+    <link href="{{ url_for('static', filename='dhl.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="card text-center">
+                <div class="card-header">
+                  <ul class="nav nav-pills card-header-pills">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="{{ url_for('index') }}">Courier Tracking</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{{ url_for('create_shipment') }}">Create Shipment</a>
+                    </li>
+                    
+                    
+                  </ul>
+                </div>
+                </div>
+            
+            <br>
+        </div>
+    </header>
+    <section class="tracking-result">
+        <div class="container">
+            <div class="alert alert-info" role="alert">
+                <h4 class="alert-heading">Tracking Result</h4>
+                <p><strong>Tracking ID:</strong> {{ n[0] }}</p>
+                <p><strong>Status:</strong> {{ n[1] }}</p>
+                <p><strong>Location:</strong> {{ n[2] }}</p>
+                <p><strong>ETA:</strong> {{ n[3] }}</p>
+                
+                <form action="{{ url_for('update') }} " method="post">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="track_id" name="track_id" value="{{ n[0] }}" placeholder="Enter Tracking ID" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Update</button>
+                </form>
+                <form action="{{ url_for('delete')}}" method="post">
+                  <br>
+                  <div class="form-group">
+                  <button type="submit" class="btn btn-primary" value="{{ n[0] }}" id="delete_id" name="delete_id" placeholder="">Delete</button>
+                  </div>  
+                </form>
+                  
+                </div>
+            
+            
+        </div>
+        
+    </section>
+</body>
+</html>
