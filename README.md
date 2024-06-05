@@ -5,13 +5,13 @@
 Welcome to the Essentials Of Computing And Programming with Python Course! This course is designed to provide you with a comprehensive understanding of Python programming, covering topics from basics to advanced concepts.
 
 ## Tools and Libraries:
-<a href="https://www.python.org/" target="_blank">Python</a>
-<a href="https://www.jetbrains.com/pycharm/" target="_blank">PyCharm</a>
-<a href="https://code.visualstudio.com/" target="_blank">VsCode</a>
+<a href="https://www.python.org/" target="_blank">Python</a></br>
+<a href="https://www.jetbrains.com/pycharm/" target="_blank">PyCharm</a></br>
+<a href="https://code.visualstudio.com/" target="_blank">VsCode</a></br>
 
 ### VSCode Extensions:
 
-<a href="https://www.python.org/" target="_blank">Python</a>
+<a href="https://www.python.org/" target="_blank">Python</a></br>
 <a href="https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner" target="_blank">Code Runner</a>
 
 ## About the Instructor
